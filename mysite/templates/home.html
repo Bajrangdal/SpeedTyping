@@ -1,6 +1,23 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h2>Welcome, {{ user.get_full_name }} <small>{{ user.username }}</small>!</h2>
-  <p>Your birth date: {{ user.profile.birth_date }}</p>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <div class="container-fluid">
+    <h2>Welcome, {{ user.get_full_name }} <small>{{ user.username }}</small>!</h2>
+
+    <div id="text">This paragraph is for Speed typing and if every thing is working fine or not.</div>
+    <br>
+    <input type="text" id="inputText" value="" placeholder="Type in the text above..." size="100" >
+    <span id="errorText"></span>
+    <h1 id="timer"></h1>
+
+    <!-- if user wants for end/Submit the tes explicitly-->
+    <button id="end">End</button>
+    <span id="reset"></span>
+  </div>
+
+
+
+
 {% endblock %}
